@@ -1,0 +1,27 @@
+[project]
+name = "efootball-maestro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "fastapi>=0.141.1",
+    "numpy>=2.5.3",
+    "pydantic>=2.13.5",
+    "scipy>=1.18.1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+efootball-maestro = "efootball_maestro:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
